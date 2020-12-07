@@ -290,6 +290,7 @@ def process_image(image):
             RightLane.best_fit[0] * 720 ** 2 + RightLane.best_fit[1] * 720 + RightLane.best_fit[2])) / 2 - 640) * parameter.xm_per_pix
 
     # Create merged output image
+    ## This layout was introduces in https://chatbotslife.com/advanced-lane-line-project-7635ddca1960
     img_out = np.zeros((576, 1280, 3), dtype=np.uint8)
 
     img_out[0:576, 0:1024, :] = cv2.resize(result, (1024, 576))
